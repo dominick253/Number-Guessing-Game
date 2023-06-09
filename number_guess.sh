@@ -5,12 +5,13 @@ PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 echo "Enter your username:"
 read username
 
+secret_number=$(( RANDOM % 1000 + 1 ))
+
 if [ $username = "Dom" ]
 then
 echo $secret_number
 fi
 
-secret_number=$(( RANDOM % 1000 + 1 ))
 number_of_guesses=0
 guess=0
 
